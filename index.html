@@ -6,7 +6,7 @@
         <meta name="description" content="Information d'une ville par son code postal">
         <meta name="viewport" content="width=device-width"/>
 
-      
+
 
         <!-- Materialize && font icon -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -28,6 +28,15 @@
                             <i class="material-icons prefix">location_city</i>
                             <input placeholder="Code postal d'une ville" name="postalCode" id="postal-code" type="number">
                             <label for="postal-code">Code postal</label>
+                        </div>
+                    </div>
+                </form>
+                <form class="col s12" onsubmit="getVilleParNom(this.nomVille.value); return false;">
+                    <div class="row">
+                        <div class="input-field prefix col s12">
+                            <i class="material-icons prefix">location_city</i>
+                            <input placeholder="Nom d'une ville" name="nomVille" id="postal-nom" type="text">
+                            <label for="postal-code">Nom d'une ville</label>
                         </div>
                     </div>
                 </form>
@@ -65,6 +74,7 @@
                     </ul>
                 </div>
             </div>
+
 
         </div>
 
