@@ -16,6 +16,21 @@ function getCityByPostalCode(postalCode) {
     ).then(writesData).catch(function (response) {M.toast({html: response})});
 }
 
+function getVilleParNom(nomVille){
+    axios.get(
+        apiBasUrl,
+        {
+            params: {
+                'nom': nomVille,
+                'format': 'geojson',
+            }
+        }
+    ).then(writesData).catch(function (response) {M.toast({html: response})});
+}
+
+
+
+
 function writesData(response) {
     let tabbleBody = document.getElementById('dataCityRow'),
          mapBounds = [];
